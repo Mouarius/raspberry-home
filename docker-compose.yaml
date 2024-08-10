@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: mariusmenault
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: django_home
+    volumes:
+      - pgdata:/var/lib/postgresql/data 
+
+volumes:
+  pgdata:
+ 
